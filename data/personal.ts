@@ -5,6 +5,7 @@ export const personal = {
   supportingStatement:
     "I build practical software and AI systems across intelligent automation, full-stack engineering, MCP, computer vision, robotics and IoT.",
   email: "kuldeepdevarasetty@yahoo.com",
+  phone: "+91 8074619225",
   github: "https://github.com/DevarasettyKuldeep",
   githubOrg: "https://github.com/HackstreetBoyzz",
   linkedin: "https://www.linkedin.com/in/devarasetty-kuldeep-8083b5350/",
@@ -12,27 +13,37 @@ export const personal = {
   location: "Coimbatore, India",
 };
 
-export const education = {
-  university: "Amrita Vishwa Vidyapeetham",
-  degree: "B.Tech Computer Science Engineering",
-  minor: "Internet of Things (IoT)",
-  location: "Coimbatore, India",
-  year: "Third Year / Fifth Semester",
-  status: "Current Student",
-};
+export const educationList = [
+  {
+    institution: "Amrita Vishwa Vidyapeetham",
+    degree: "B.Tech in Computer Science and Engineering",
+    minor: "Minor in Internet of Things (IoT)",
+    details: "CGPA: 7.6 / 10",
+    period: "Jul 2024 – Present",
+    location: "Coimbatore, India",
+  },
+  {
+    institution: "FIITJEE Junior College",
+    degree: "Intermediate",
+    minor: "Mathematics, Physics, Chemistry",
+    details: "Pre-University College",
+    period: "2022 – 2024",
+    location: "Vijayawada, India",
+  },
+];
 
 export const terminalLines = [
   { prompt: "$ whoami", output: "" },
   { prompt: "", output: "Kuldeep Devarasetty" },
   { prompt: "", output: "B.Tech CSE @ Amrita Vishwa Vidyapeetham" },
-  { prompt: "", output: "Minor: IoT" },
+  { prompt: "", output: "Minor: IoT | CGPA: 7.6" },
   { prompt: "", output: "" },
   { prompt: "$ focus", output: "" },
   { prompt: "", output: "AI / ML" },
   { prompt: "", output: "Agentic AI" },
   { prompt: "", output: "MCP" },
   { prompt: "", output: "Full-Stack" },
-  { prompt: "", output: "IoT" },
+  { prompt: "", output: "IoT & Robotics" },
   { prompt: "", output: "" },
   { prompt: "$ status", output: "" },
   { prompt: "", output: "building..." },
@@ -41,30 +52,30 @@ export const terminalLines = [
 export const quickProfile = [
   {
     label: "3rd Year",
-    description: "B.Tech CSE",
+    description: "B.Tech CSE @ Amrita",
     icon: "GraduationCap",
   },
   {
     label: "IoT",
-    description: "Minor",
+    description: "Minor Specialization",
     icon: "Cpu",
   },
   {
     label: "AI + Software",
-    description: "Core Focus",
+    description: "Full-Stack & Intelligent Systems",
     icon: "Brain",
   },
   {
-    label: "MCP + Agentic AI",
-    description: "Current Technical Focus",
+    label: "Research & MCP",
+    description: "Published Paper & Agentic AI",
     icon: "Sparkles",
   },
 ];
 
 export const aboutText = [
-  "I'm Kuldeep Devarasetty, a third-year B.Tech Computer Science Engineering student at Amrita Vishwa Vidyapeetham, Coimbatore, with a minor in IoT. I enjoy building practical systems that combine software engineering, artificial intelligence, full-stack development and connected hardware.",
-  "My projects range from AI-powered applications and LLM-based desktop assistants to full-stack platforms, autonomous robotics, computer vision and operating-system implementations.",
-  "I have been exploring and building with Model Context Protocol (MCP), AI tool calling and AI-native backend architectures — alongside work in machine learning, agentic AI, computer vision and embedded systems.",
+  "I'm Kuldeep Devarasetty, a Computer Science Engineering student at Amrita Vishwa Vidyapeetham, Coimbatore, with a minor in Internet of Things (IoT). I enjoy building practical systems that combine software engineering, artificial intelligence, full-stack development, and connected hardware.",
+  "My projects range from AI-powered applications and LLM-based desktop assistants to full-stack platforms, autonomous robotics, computer vision, and operating-system implementations.",
+  "I also conduct research in embedded systems and perception algorithms, having presented a conference paper on LiDAR-based adverse weather perception at NEIeX 2026 (VIT Vellore / IEEE Madras Section).",
 ];
 
 export const navLinks = [

@@ -411,6 +411,60 @@ Robot`,
     featured: false,
     order: 9,
   },
+  {
+    id: "reconpilot",
+    title: "ReconPilot — AI Financial Reconciliation Engine",
+    shortTitle: "ReconPilot",
+    category: "AI / FinTech / Backend",
+    tags: ["AI / ML", "Full-Stack"],
+    description:
+      "An AI-powered 3-way financial reconciliation engine matching Orders, Razorpay settlements, and Bank statements with fee-aware calculations and cash forecasting.",
+    detailedDescription:
+      "ReconPilot automates the pain of 3-way financial reconciliation. It ingests orders, payment gateway settlements, and bank statements, matches them through fee-aware logic, uses AI to diagnose unmatched exceptions, and projects 7-day cash liquidity — all in a single pipeline.",
+    problem:
+      "Manual reconciliation across payment gateways, banks, and internal order systems is error-prone, slow, and fails to scale. Discrepancies from fees, partial settlements, and timing differences create cascading problems.",
+    approach:
+      "Built a multi-stage pipeline: deterministic fee-aware matching engine for high-confidence reconciliation, followed by an AI investigator (Google Gemini) for structured exception diagnosis, and a forward-looking cash forecasting module for liquidity planning.",
+    architecture: `Orders CSV + Settlements CSV + Bank CSV
+  ↓
+Ingestion & Schema Validation
+  ↓
+3-Way Fee-Aware Matching Engine
+  ↓
+Exception Isolation
+  ↓
+AI Investigator (Gemini API)
+  ↓
+7-Day Cash Forecast
+  ↓
+Audit Report (JSON + SQLite)`,
+    technologies: [
+      "Python",
+      "Google Gemini API",
+      "SQLite",
+      "Pandas",
+      "CSV Processing",
+      "JSON",
+    ],
+    highlights: [
+      "3-way reconciliation (Orders ↔ Settlements ↔ Bank)",
+      "Fee-aware matching with tolerance thresholds",
+      "AI exception investigator with structured output",
+      "7-day forward cash liquidity forecasting",
+      "SQLite audit trail and JSON report export",
+      "Zero false-match assertion in test suite",
+      "Built for Razorpay AI Buildathon Track 04",
+    ],
+    concepts: [
+      "Deterministic matching + AI diagnosis hybrid",
+      "Fee-aware financial reconciliation",
+      "Forward cash flow projection",
+      "Structured AI output with schema enforcement",
+    ],
+    githubUrl: "https://github.com/DevarasettyKuldeep/reconpilot",
+    featured: true,
+    order: 10,
+  },
 ];
 
 export const projectFilters = [
