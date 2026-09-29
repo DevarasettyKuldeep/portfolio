@@ -6,7 +6,9 @@ import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 import SectionHeader from "./SectionHeader";
 import ProjectModal from "./ProjectModal";
+import GitHubRepos from "./GitHubRepos";
 import { projects, projectFilters, Project } from "@/data/projects";
+import { GitHubRepo } from "@/lib/github";
 
 function ProjectCard({
   project,
@@ -121,7 +123,7 @@ function ProjectCard({
   );
 }
 
-export default function Projects() {
+export default function Projects({ githubRepos = [] }: { githubRepos?: GitHubRepo[] }) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -209,6 +211,8 @@ export default function Projects() {
             </motion.div>
           </div>
         )}
+      {/* Auto-synced GitHub repos */}
+        <GitHubRepos repos={githubRepos} />
       </div>
 
       {/* Project Modal */}
