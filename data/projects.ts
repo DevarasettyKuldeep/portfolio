@@ -465,6 +465,57 @@ Audit Report (JSON + SQLite)`,
     featured: true,
     order: 10,
   },
+  {
+    id: "gather-events",
+    title: "gather — Campus Events & Hackathon Platform",
+    shortTitle: "gather",
+    category: "Full-Stack / Event Tech",
+    tags: ["Full-Stack"],
+    description:
+      "A fast campus event discovery and pass ticketing web application built for the Render72 Hackathon, featuring real-time schedules, calendar sync, and digital QR passes.",
+    detailedDescription:
+      "Built for the Render72 Hackathon to eliminate campus event confusion. Gather brings workshops, hackathons, and cultural fests into one unified hub. It provides instant fuzzy search, live seat availability tracking, detailed timeline breakdowns, personalized digital passes with QR codes, 1-click .ics calendar export, and browser bookmarking.",
+    problem:
+      "College event information is scattered across fragmented WhatsApp chats, Instagram stories, and flyers, leading students to miss out on hackathons, workshops, and critical deadlines.",
+    approach:
+      "Engineered an ultra-fast frontend with React 19, TypeScript, and Vite utilizing custom design tokens for a sleek dark mode. Implemented offline fallbacks, modal overlays for pass generation, dynamic calendar file creation (.ics), and responsive event cards with real-time seat counters.",
+    architecture: `Client (React 19 + Vite)
+  ↓
+Event Discovery & Filtering Engine
+  ↓
+Local Storage Bookmarking & State Cache
+  ↓
+Digital Pass Generator (QR + .ics Calendar Export)
+  ↓
+Render72 Event API / Offline Fallback`,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "React Router",
+      "CSS",
+      "Vercel",
+    ],
+    highlights: [
+      "Built for Render72 Hackathon",
+      "Real-time event search & multi-category filtering",
+      "Live seat counter and registration status",
+      "Digital pass generation with unique QR code",
+      ".ics calendar sync (Google, Apple, Outlook)",
+      "Local browser event bookmarking",
+      "Interactive 3D holographic audition pass easter egg",
+      "Offline cache fallback for network resilience",
+    ],
+    concepts: [
+      "Component modularity & code splitting",
+      "State persistence via localStorage",
+      "Dynamic .ics calendar generation",
+      "Performance optimization for sub-second LCP",
+    ],
+    githubUrl: "https://github.com/DevarasettyKuldeep/render72_1",
+    featured: true,
+    order: 11,
+  },
 ];
 
 export const projectFilters = [

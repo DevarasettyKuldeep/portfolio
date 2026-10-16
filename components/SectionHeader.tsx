@@ -8,6 +8,7 @@ interface SectionHeaderProps {
   subtitle?: string;
   tag?: string;
   align?: "left" | "center";
+  glowProgress?: number;
 }
 
 export default function SectionHeader({
@@ -15,6 +16,7 @@ export default function SectionHeader({
   subtitle,
   tag,
   align = "left",
+  glowProgress,
 }: SectionHeaderProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -43,7 +45,43 @@ export default function SectionHeader({
             {subtitle}
           </p>
         )}
-        <div className="mt-4 h-px bg-gradient-to-r from-accent/50 via-accent/20 to-transparent max-w-xs" />
+        {glowProgress !== undefined ? (
+          <div className="relative mt-5 h-px w-full max-w-md md:max-w-lg bg-white/10 overflow-hidden rounded-full">
+            {/* Subtle base gradient track */}
+            <motion.div
+              className="absolute inset-0 pointer-events-none"
+              animate={{
+                background: `linear-gradient(90deg, 
+                  rgba(0, 212, 170, ${Math.max(0.08, 0.45 - glowProgress * 0.38)}) 0%, 
+                  rgba(0, 212, 170, 0.6) ${glowProgress * 100}%, 
+                  rgba(0, 212, 170, ${Math.max(0.08, 0.08 + glowProgress * 0.38)}) 100%
+                )`,
+              }}
+              transition={{ duration: 0.3 }}
+            />
+
+            {/* Simple, subtle sliding accent segment (no white dot, no heavy blur) */}
+            <motion.div
+              className="absolute top-0 bottom-0 pointer-events-none"
+              animate={{
+                left: `${glowProgress * 100}%`,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 26,
+              }}
+              style={{
+                transform: "translateX(-50%)",
+              }}
+            >
+              {/* Clean accent line segment */}
+              <div className="w-16 md:w-20 h-full bg-accent rounded-full shadow-[0_0_8px_rgba(0,212,170,0.45)]" />
+            </motion.div>
+          </div>
+        ) : (
+          <div className="mt-4 h-px bg-gradient-to-r from-accent/50 via-accent/20 to-transparent max-w-xs" />
+        )}
       </motion.div>
     </div>
   );

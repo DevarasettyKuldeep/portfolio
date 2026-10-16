@@ -127,6 +127,10 @@ export default function Projects({ githubRepos = [] }: { githubRepos?: GitHubRep
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  const activeIndex = projectFilters.indexOf(activeFilter);
+  const glowProgress =
+    activeIndex >= 0 ? activeIndex / (projectFilters.length - 1) : 0;
+
   const filteredProjects =
     activeFilter === "All"
       ? projects
@@ -148,6 +152,7 @@ export default function Projects({ githubRepos = [] }: { githubRepos?: GitHubRep
           tag="what_i_build"
           title="Projects & Systems"
           subtitle="Practical implementations across artificial intelligence, backend engineering, robotics, and connected hardware."
+          glowProgress={glowProgress}
         />
 
         {/* Filters */}

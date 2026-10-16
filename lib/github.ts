@@ -24,6 +24,9 @@ const CURATED_REPO_NAMES = new Set([
   "Hand-Tracking-using-MediaPipe-and-OpenCV",
   "Experimental-Operating-System-",
   "reconpilot",
+  "render72_1", // Render72 Hackathon project (gather) curated in projects
+  "render71_3", // prior iteration
+  "render72_2", // prior iteration
   "portfolio", // this portfolio itself
   "DevarasettyKuldeep", // profile README repo
 ]);
@@ -49,6 +52,7 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
         (repo) =>
           !repo.fork &&
           !CURATED_REPO_NAMES.has(repo.name) &&
+          !repo.name.startsWith("render7") &&
           repo.name !== ".github"
       )
       .sort(

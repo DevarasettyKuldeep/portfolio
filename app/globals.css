@@ -61,3 +61,70 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Sci-Fi glow & scanline animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes scanline-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scanline-sweep {
+  animation: scanline-sweep 2.2s ease-in-out infinite;
+}
+
+/* StarBorder subtle traveling star keyframes */
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-100%, 0%);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(100%, 0%);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+}
+
+.animate-star-movement-bottom {
+  animation: star-movement-bottom linear infinite;
+}
+
+.animate-star-movement-top {
+  animation: star-movement-top linear infinite;
+}
+

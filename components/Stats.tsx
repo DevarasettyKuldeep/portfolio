@@ -11,8 +11,8 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { value: 10, suffix: "+", label: "Projects", sublabel: "Built & Shipped" },
-  { value: 5, suffix: "+", label: "AI / ML", sublabel: "Intelligent Systems" },
+  { value: 11, suffix: "+", label: "Projects", sublabel: "Built & Shipped" },
+  { value: 6, suffix: "+", label: "AI / ML", sublabel: "Intelligent Systems" },
   { value: 6, suffix: "+", label: "Domains", sublabel: "Tech Verticals" },
   { value: 1, suffix: "", label: "Paper", sublabel: "IEEE Conference" },
 ];
