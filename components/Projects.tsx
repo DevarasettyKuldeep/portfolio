@@ -6,7 +6,9 @@ import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 import SectionHeader from "./SectionHeader";
 import ProjectModal from "./ProjectModal";
+import GitHubRepos from "./GitHubRepos";
 import { projects, projectFilters, Project } from "@/data/projects";
+import { GitHubRepo } from "@/lib/github";
 
 function ProjectCard({
   project,
@@ -121,9 +123,13 @@ function ProjectCard({
   );
 }
 
-export default function Projects() {
+export default function Projects({ githubRepos = [] }: { githubRepos?: GitHubRepo[] }) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const activeIndex = projectFilters.indexOf(activeFilter);
+  const glowProgress =
+    activeIndex >= 0 ? activeIndex / (projectFilters.length - 1) : 0;
 
   const filteredProjects =
     activeFilter === "All"
@@ -146,6 +152,7 @@ export default function Projects() {
           tag="what_i_build"
           title="Projects & Systems"
           subtitle="Practical implementations across artificial intelligence, backend engineering, robotics, and connected hardware."
+          glowProgress={glowProgress}
         />
 
         {/* Filters */}
@@ -209,6 +216,8 @@ export default function Projects() {
             </motion.div>
           </div>
         )}
+      {/* Auto-synced GitHub repos */}
+        <GitHubRepos repos={githubRepos} />
       </div>
 
       {/* Project Modal */}

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TerminalSquare, X } from "lucide-react";
+import StarBorder from "@/components/StarBorder";
 
 interface TerminalLine {
   type: "input" | "output";
@@ -194,17 +195,26 @@ export default function TerminalComponent() {
 
   return (
     <>
-      {/* Toggle button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-[140] p-3 bg-[#0d0d0d] border border-white/10 rounded-xl text-accent hover:border-accent/30 hover:shadow-[0_0_20px_rgba(0,212,170,0.15)] transition-all duration-300"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Toggle terminal"
-        title="Toggle terminal (Ctrl+`)"
+      {/* Toggle button with StarBorder animation */}
+      <motion.div
+        className="fixed bottom-6 right-6 z-[140]"
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.94 }}
       >
-        <TerminalSquare size={20} />
-      </motion.button>
+        <StarBorder
+          as="button"
+          onClick={() => setIsOpen(!isOpen)}
+          color="#00e5ff"
+          speed="5.5s"
+          className="group cursor-pointer shadow-[0_4px_24px_rgba(0,0,0,0.8)] hover:shadow-[0_0_24px_rgba(0,229,255,0.3)] transition-shadow duration-300"
+          aria-label="Toggle terminal"
+          title="Toggle terminal (Ctrl+`)"
+        >
+          <div className="p-3 text-[#00e5ff] group-hover:text-white transition-colors duration-300 flex items-center justify-center">
+            <TerminalSquare size={20} />
+          </div>
+        </StarBorder>
+      </motion.div>
 
       {/* Terminal overlay */}
       <AnimatePresence>

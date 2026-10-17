@@ -68,7 +68,7 @@ export const journeyMilestones: JourneyMilestone[] = [
 export const experienceItems = [
   {
     category: "Technical Projects",
-    description: "9+ engineering projects across AI, full-stack, robotics and systems programming.",
+    description: "10+ engineering projects across AI, full-stack, robotics, FinTech and systems programming.",
     icon: "Folder",
   },
   {

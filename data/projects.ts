@@ -411,6 +411,111 @@ Robot`,
     featured: false,
     order: 9,
   },
+  {
+    id: "reconpilot",
+    title: "ReconPilot — AI Financial Reconciliation Engine",
+    shortTitle: "ReconPilot",
+    category: "AI / FinTech / Backend",
+    tags: ["AI / ML", "Full-Stack"],
+    description:
+      "An AI-powered 3-way financial reconciliation engine matching Orders, Razorpay settlements, and Bank statements with fee-aware calculations and cash forecasting.",
+    detailedDescription:
+      "ReconPilot automates the pain of 3-way financial reconciliation. It ingests orders, payment gateway settlements, and bank statements, matches them through fee-aware logic, uses AI to diagnose unmatched exceptions, and projects 7-day cash liquidity — all in a single pipeline.",
+    problem:
+      "Manual reconciliation across payment gateways, banks, and internal order systems is error-prone, slow, and fails to scale. Discrepancies from fees, partial settlements, and timing differences create cascading problems.",
+    approach:
+      "Built a multi-stage pipeline: deterministic fee-aware matching engine for high-confidence reconciliation, followed by an AI investigator (Google Gemini) for structured exception diagnosis, and a forward-looking cash forecasting module for liquidity planning.",
+    architecture: `Orders CSV + Settlements CSV + Bank CSV
+  ↓
+Ingestion & Schema Validation
+  ↓
+3-Way Fee-Aware Matching Engine
+  ↓
+Exception Isolation
+  ↓
+AI Investigator (Gemini API)
+  ↓
+7-Day Cash Forecast
+  ↓
+Audit Report (JSON + SQLite)`,
+    technologies: [
+      "Python",
+      "Google Gemini API",
+      "SQLite",
+      "Pandas",
+      "CSV Processing",
+      "JSON",
+    ],
+    highlights: [
+      "3-way reconciliation (Orders ↔ Settlements ↔ Bank)",
+      "Fee-aware matching with tolerance thresholds",
+      "AI exception investigator with structured output",
+      "7-day forward cash liquidity forecasting",
+      "SQLite audit trail and JSON report export",
+      "Zero false-match assertion in test suite",
+      "Built for Razorpay AI Buildathon Track 04",
+    ],
+    concepts: [
+      "Deterministic matching + AI diagnosis hybrid",
+      "Fee-aware financial reconciliation",
+      "Forward cash flow projection",
+      "Structured AI output with schema enforcement",
+    ],
+    githubUrl: "https://github.com/DevarasettyKuldeep/reconpilot",
+    featured: true,
+    order: 10,
+  },
+  {
+    id: "gather-events",
+    title: "gather — Campus Events & Hackathon Platform",
+    shortTitle: "gather",
+    category: "Full-Stack / Event Tech",
+    tags: ["Full-Stack"],
+    description:
+      "A fast campus event discovery and pass ticketing web application built for the Render72 Hackathon, featuring real-time schedules, calendar sync, and digital QR passes.",
+    detailedDescription:
+      "Built for the Render72 Hackathon to eliminate campus event confusion. Gather brings workshops, hackathons, and cultural fests into one unified hub. It provides instant fuzzy search, live seat availability tracking, detailed timeline breakdowns, personalized digital passes with QR codes, 1-click .ics calendar export, and browser bookmarking.",
+    problem:
+      "College event information is scattered across fragmented WhatsApp chats, Instagram stories, and flyers, leading students to miss out on hackathons, workshops, and critical deadlines.",
+    approach:
+      "Engineered an ultra-fast frontend with React 19, TypeScript, and Vite utilizing custom design tokens for a sleek dark mode. Implemented offline fallbacks, modal overlays for pass generation, dynamic calendar file creation (.ics), and responsive event cards with real-time seat counters.",
+    architecture: `Client (React 19 + Vite)
+  ↓
+Event Discovery & Filtering Engine
+  ↓
+Local Storage Bookmarking & State Cache
+  ↓
+Digital Pass Generator (QR + .ics Calendar Export)
+  ↓
+Render72 Event API / Offline Fallback`,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "React Router",
+      "CSS",
+      "Vercel",
+    ],
+    highlights: [
+      "Built for Render72 Hackathon",
+      "Real-time event search & multi-category filtering",
+      "Live seat counter and registration status",
+      "Digital pass generation with unique QR code",
+      ".ics calendar sync (Google, Apple, Outlook)",
+      "Local browser event bookmarking",
+      "Interactive 3D holographic audition pass easter egg",
+      "Offline cache fallback for network resilience",
+    ],
+    concepts: [
+      "Component modularity & code splitting",
+      "State persistence via localStorage",
+      "Dynamic .ics calendar generation",
+      "Performance optimization for sub-second LCP",
+    ],
+    githubUrl: "https://github.com/DevarasettyKuldeep/render72_1",
+    featured: true,
+    order: 11,
+  },
 ];
 
 export const projectFilters = [

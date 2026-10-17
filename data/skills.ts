@@ -21,7 +21,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Frontend",
     icon: "Layout",
-    skills: ["React", "Vite", "HTML", "CSS", "Tailwind CSS"],
+    skills: ["React", "Next.js", "Vite", "Tailwind CSS", "HTML", "CSS"],
   },
   {
     name: "Backend",
@@ -32,25 +32,26 @@ export const skillCategories: SkillCategory[] = [
       "REST APIs",
       "JWT",
       "MongoDB",
+      "SQLite",
       "MySQL",
-      "PHP",
     ],
   },
   {
     name: "AI / ML",
     icon: "Brain",
     skills: [
+      "Google Gemini API",
+      "OpenRouter",
+      "Scikit-Learn",
+      "Pandas & NumPy",
       "Machine Learning",
       "Generative AI",
       "LLM Applications",
       "AI Assistants",
-      "AI Task Planning",
-      "OpenRouter",
-      "Speech-to-Text",
-      "Text-to-Speech",
       "Computer Vision",
       "MediaPipe",
       "OpenCV",
+      "Speech-to-Text",
     ],
   },
   {
@@ -71,6 +72,7 @@ export const skillCategories: SkillCategory[] = [
     name: "IoT / Embedded / Robotics",
     icon: "Cpu",
     skills: [
+      "STM32",
       "ESP32",
       "Raspberry Pi",
       "Arduino",
