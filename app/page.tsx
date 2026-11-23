@@ -5,7 +5,6 @@ import About from "@/components/About";
 import Stats from "@/components/Stats";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
-import GitHubRepos from "@/components/GitHubRepos";
 import Experience from "@/components/Experience";
 import Research from "@/components/Research";
 import Journey from "@/components/Journey";
@@ -15,6 +14,8 @@ import TerminalComponent from "@/components/Terminal";
 import Footer from "@/components/Footer";
 import GrainientWaves from "@/components/GrainientWaves";
 import { fetchGitHubRepos } from "@/lib/github";
+
+export const revalidate = 900; // Revalidate every 15 minutes
 
 export default async function Home() {
   const githubRepos = await fetchGitHubRepos();

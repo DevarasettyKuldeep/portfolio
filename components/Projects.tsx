@@ -43,7 +43,7 @@ function ProjectCard({
           <span className="font-mono text-accent text-xs tracking-wider">
             {featured && (
               <span className="text-gray-500 mr-1.5">
-                {String(project.order).padStart(2, "0")} /
+                {String(index + 1).padStart(2, "0")} /
               </span>
             )}
             {project.category}

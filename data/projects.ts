@@ -231,187 +231,6 @@ Robot`,
     order: 4,
   },
   {
-    id: "mark-i",
-    title: "Mark-I — Multimodal AI Voice & Text Assistant",
-    shortTitle: "Mark-I",
-    category: "AI / Automation",
-    tags: ["AI / ML", "Agentic AI"],
-    description:
-      "A multimodal AI assistant with voice interaction, natural-language tool calling, structured JSON task execution and system automation.",
-    detailedDescription:
-      "Mark-I is the predecessor to Mark-X, featuring voice and text interaction with natural-language tool calling, task scheduling, and comprehensive system automation capabilities.",
-    problem:
-      "Creating an AI assistant that can bridge natural language commands with structured system automation across multiple domains.",
-    approach:
-      "Built a Python application using OpenRouter for LLM capabilities, faster-whisper for speech recognition, and a structured JSON task execution pipeline for reliable automation.",
-    technologies: [
-      "Python",
-      "OpenRouter",
-      "faster-whisper",
-      "pyttsx3",
-      "Tkinter",
-    ],
-    highlights: [
-      "Voice and text interaction",
-      "Natural-language tool calling",
-      "Structured JSON task execution",
-      "Task scheduler",
-      "System automation",
-      "Browser navigation",
-      "Text-to-speech",
-      "File operations",
-      "Code sandbox",
-      "Web search",
-    ],
-    concepts: [
-      "Multimodal interaction",
-      "Tool calling architecture",
-      "Structured task execution",
-    ],
-    githubUrl: "https://github.com/DevarasettyKuldeep/Mark-I",
-    featured: false,
-    order: 5,
-  },
-  {
-    id: "nitrostack",
-    title: "NitroStack — MCP Server Framework",
-    shortTitle: "NitroStack",
-    category: "MCP / AI Infrastructure",
-    tags: ["MCP", "Agentic AI"],
-    description:
-      "A TypeScript-based framework for building production-ready MCP servers and AI-native backends.",
-    detailedDescription:
-      "NitroStack provides a structured framework for building Model Context Protocol (MCP) servers with TypeScript decorators, dependency injection, authentication, middleware, Zod validation, and UI widgets for AI-native backend development.",
-    problem:
-      "Building MCP servers from scratch requires significant boilerplate and lacks standardized patterns for authentication, validation, and tool orchestration.",
-    approach:
-      "Created a TypeScript framework with decorator-based tool definitions, dependency injection, Zod validation, middleware pipeline, and built-in authentication to streamline MCP server development.",
-    technologies: [
-      "TypeScript",
-      "MCP",
-      "Zod",
-      "Decorators",
-      "Dependency Injection",
-    ],
-    highlights: [
-      "MCP server development",
-      "TypeScript decorators",
-      "Dependency injection",
-      "Authentication middleware",
-      "Zod validation",
-      "UI widgets",
-      "Tool definitions",
-      "NitroStudio",
-      "AI-native backend architecture",
-    ],
-    concepts: [
-      "Model Context Protocol",
-      "AI-native backend architecture",
-      "Decorator patterns",
-      "Middleware pipelines",
-    ],
-    githubUrl: "https://github.com/DevarasettyKuldeep/nitrostack",
-    featured: false,
-    order: 6,
-  },
-  {
-    id: "car-dealership",
-    title: "Car Dealership Management System",
-    shortTitle: "Car Dealership",
-    category: "Java / OOP / Software Architecture",
-    tags: ["Systems"],
-    description:
-      "A Java command-line application simulating dealership inventory, vehicle inspection, comparison, customer management and transaction processing.",
-    detailedDescription:
-      "A comprehensive Java application demonstrating advanced object-oriented programming principles through a simulated car dealership management system.",
-    problem:
-      "Demonstrating advanced OOP concepts through a practical, real-world simulation that covers inventory management, customer relationships, and transaction processing.",
-    approach:
-      "Designed a Java application using abstraction, interfaces, composition, and inheritance to model a complete dealership workflow from vehicle inspection to purchase.",
-    technologies: ["Java"],
-    highlights: [
-      "Abstraction and interfaces",
-      "Composition and inheritance",
-      "ArrayList-based data management",
-      "Customer management",
-      "Purchase history tracking",
-      "Transaction processing",
-      "Vehicle comparison",
-    ],
-    concepts: [
-      "Object-oriented design patterns",
-      "SOLID principles",
-      "Domain modeling",
-    ],
-    githubUrl:
-      "https://github.com/DevarasettyKuldeep/Car-Dealership-Platform",
-    featured: false,
-    order: 7,
-  },
-  {
-    id: "hand-tracking",
-    title: "Real-Time Hand Tracking",
-    shortTitle: "Hand Tracking",
-    category: "Computer Vision",
-    tags: ["Computer Vision", "AI / ML"],
-    description:
-      "A real-time computer vision application that detects hands and tracks 21 landmarks per hand using webcam input.",
-    detailedDescription:
-      "Uses MediaPipe and OpenCV to perform real-time hand detection and landmark tracking, rendering a skeleton overlay on webcam feed for up to two hands simultaneously.",
-    problem:
-      "Real-time hand tracking requires efficient computer vision pipelines that can process webcam frames with low latency while maintaining accurate landmark detection.",
-    approach:
-      "Leveraged MediaPipe's hand detection model with OpenCV for webcam capture and real-time visualization of 21 landmarks per hand.",
-    technologies: ["Python", "MediaPipe", "OpenCV"],
-    highlights: [
-      "Up to two hands detection",
-      "21 landmarks per hand",
-      "Real-time skeleton rendering",
-      "Webcam processing",
-    ],
-    concepts: [
-      "Computer vision pipeline",
-      "Landmark detection",
-      "Real-time processing",
-    ],
-    githubUrl:
-      "https://github.com/DevarasettyKuldeep/Hand-Tracking-using-MediaPipe-and-OpenCV",
-    featured: false,
-    order: 8,
-  },
-  {
-    id: "experimental-os",
-    title: "Experimental Operating System — eXpOS",
-    shortTitle: "eXpOS",
-    category: "Operating Systems / Systems",
-    tags: ["Systems"],
-    description:
-      "An implementation-based operating systems project using the eXpOS educational platform, completed through Stage 10.",
-    detailedDescription:
-      "A hands-on operating systems project that involves implementing core OS concepts through staged development on the eXpOS educational platform.",
-    problem:
-      "Understanding operating system internals requires hands-on implementation of core concepts like process management, memory management, and system calls.",
-    approach:
-      "Followed the staged eXpOS curriculum to implement progressively complex OS components, building understanding from basic runtime environments to system-level operations.",
-    technologies: ["eXpOS", "SPL", "ExpL"],
-    highlights: [
-      "OS concept implementation",
-      "Runtime environment setup",
-      "Staged development through Stage 10",
-      "Low-level systems programming",
-    ],
-    concepts: [
-      "Process management",
-      "Memory management",
-      "System calls",
-      "OS architecture",
-    ],
-    githubUrl:
-      "https://github.com/DevarasettyKuldeep/Experimental-Operating-System-",
-    featured: false,
-    order: 9,
-  },
-  {
     id: "reconpilot",
     title: "ReconPilot — AI Financial Reconciliation Engine",
     shortTitle: "ReconPilot",
@@ -463,7 +282,7 @@ Audit Report (JSON + SQLite)`,
     ],
     githubUrl: "https://github.com/DevarasettyKuldeep/reconpilot",
     featured: true,
-    order: 10,
+    order: 5,
   },
   {
     id: "gather-events",
@@ -514,6 +333,187 @@ Render72 Event API / Offline Fallback`,
     ],
     githubUrl: "https://github.com/DevarasettyKuldeep/render72_1",
     featured: true,
+    order: 6,
+  },
+  {
+    id: "mark-i",
+    title: "Mark-I — Multimodal AI Voice & Text Assistant",
+    shortTitle: "Mark-I",
+    category: "AI / Automation",
+    tags: ["AI / ML", "Agentic AI"],
+    description:
+      "A multimodal AI assistant with voice interaction, natural-language tool calling, structured JSON task execution and system automation.",
+    detailedDescription:
+      "Mark-I is the predecessor to Mark-X, featuring voice and text interaction with natural-language tool calling, task scheduling, and comprehensive system automation capabilities.",
+    problem:
+      "Creating an AI assistant that can bridge natural language commands with structured system automation across multiple domains.",
+    approach:
+      "Built a Python application using OpenRouter for LLM capabilities, faster-whisper for speech recognition, and a structured JSON task execution pipeline for reliable automation.",
+    technologies: [
+      "Python",
+      "OpenRouter",
+      "faster-whisper",
+      "pyttsx3",
+      "Tkinter",
+    ],
+    highlights: [
+      "Voice and text interaction",
+      "Natural-language tool calling",
+      "Structured JSON task execution",
+      "Task scheduler",
+      "System automation",
+      "Browser navigation",
+      "Text-to-speech",
+      "File operations",
+      "Code sandbox",
+      "Web search",
+    ],
+    concepts: [
+      "Multimodal interaction",
+      "Tool calling architecture",
+      "Structured task execution",
+    ],
+    githubUrl: "https://github.com/DevarasettyKuldeep/Mark-I",
+    featured: false,
+    order: 7,
+  },
+  {
+    id: "nitrostack",
+    title: "NitroStack — MCP Server Framework",
+    shortTitle: "NitroStack",
+    category: "MCP / AI Infrastructure",
+    tags: ["MCP", "Agentic AI"],
+    description:
+      "A TypeScript-based framework for building production-ready MCP servers and AI-native backends.",
+    detailedDescription:
+      "NitroStack provides a structured framework for building Model Context Protocol (MCP) servers with TypeScript decorators, dependency injection, authentication, middleware, Zod validation, and UI widgets for AI-native backend development.",
+    problem:
+      "Building MCP servers from scratch requires significant boilerplate and lacks standardized patterns for authentication, validation, and tool orchestration.",
+    approach:
+      "Created a TypeScript framework with decorator-based tool definitions, dependency injection, Zod validation, middleware pipeline, and built-in authentication to streamline MCP server development.",
+    technologies: [
+      "TypeScript",
+      "MCP",
+      "Zod",
+      "Decorators",
+      "Dependency Injection",
+    ],
+    highlights: [
+      "MCP server development",
+      "TypeScript decorators",
+      "Dependency injection",
+      "Authentication middleware",
+      "Zod validation",
+      "UI widgets",
+      "Tool definitions",
+      "NitroStudio",
+      "AI-native backend architecture",
+    ],
+    concepts: [
+      "Model Context Protocol",
+      "AI-native backend architecture",
+      "Decorator patterns",
+      "Middleware pipelines",
+    ],
+    githubUrl: "https://github.com/DevarasettyKuldeep/nitrostack",
+    featured: false,
+    order: 8,
+  },
+  {
+    id: "car-dealership",
+    title: "Car Dealership Management System",
+    shortTitle: "Car Dealership",
+    category: "Java / OOP / Software Architecture",
+    tags: ["Systems"],
+    description:
+      "A Java command-line application simulating dealership inventory, vehicle inspection, comparison, customer management and transaction processing.",
+    detailedDescription:
+      "A comprehensive Java application demonstrating advanced object-oriented programming principles through a simulated car dealership management system.",
+    problem:
+      "Demonstrating advanced OOP concepts through a practical, real-world simulation that covers inventory management, customer relationships, and transaction processing.",
+    approach:
+      "Designed a Java application using abstraction, interfaces, composition, and inheritance to model a complete dealership workflow from vehicle inspection to purchase.",
+    technologies: ["Java"],
+    highlights: [
+      "Abstraction and interfaces",
+      "Composition and inheritance",
+      "ArrayList-based data management",
+      "Customer management",
+      "Purchase history tracking",
+      "Transaction processing",
+      "Vehicle comparison",
+    ],
+    concepts: [
+      "Object-oriented design patterns",
+      "SOLID principles",
+      "Domain modeling",
+    ],
+    githubUrl:
+      "https://github.com/DevarasettyKuldeep/Car-Dealership-Platform",
+    featured: false,
+    order: 9,
+  },
+  {
+    id: "hand-tracking",
+    title: "Real-Time Hand Tracking",
+    shortTitle: "Hand Tracking",
+    category: "Computer Vision",
+    tags: ["Computer Vision", "AI / ML"],
+    description:
+      "A real-time computer vision application that detects hands and tracks 21 landmarks per hand using webcam input.",
+    detailedDescription:
+      "Uses MediaPipe and OpenCV to perform real-time hand detection and landmark tracking, rendering a skeleton overlay on webcam feed for up to two hands simultaneously.",
+    problem:
+      "Real-time hand tracking requires efficient computer vision pipelines that can process webcam frames with low latency while maintaining accurate landmark detection.",
+    approach:
+      "Leveraged MediaPipe's hand detection model with OpenCV for webcam capture and real-time visualization of 21 landmarks per hand.",
+    technologies: ["Python", "MediaPipe", "OpenCV"],
+    highlights: [
+      "Up to two hands detection",
+      "21 landmarks per hand",
+      "Real-time skeleton rendering",
+      "Webcam processing",
+    ],
+    concepts: [
+      "Computer vision pipeline",
+      "Landmark detection",
+      "Real-time processing",
+    ],
+    githubUrl:
+      "https://github.com/DevarasettyKuldeep/Hand-Tracking-using-MediaPipe-and-OpenCV",
+    featured: false,
+    order: 10,
+  },
+  {
+    id: "experimental-os",
+    title: "Experimental Operating System — eXpOS",
+    shortTitle: "eXpOS",
+    category: "Operating Systems / Systems",
+    tags: ["Systems"],
+    description:
+      "An implementation-based operating systems project using the eXpOS educational platform, completed through Stage 10.",
+    detailedDescription:
+      "A hands-on operating systems project that involves implementing core OS concepts through staged development on the eXpOS educational platform.",
+    problem:
+      "Understanding operating system internals requires hands-on implementation of core concepts like process management, memory management, and system calls.",
+    approach:
+      "Followed the staged eXpOS curriculum to implement progressively complex OS components, building understanding from basic runtime environments to system-level operations.",
+    technologies: ["eXpOS", "SPL", "ExpL"],
+    highlights: [
+      "OS concept implementation",
+      "Runtime environment setup",
+      "Staged development through Stage 10",
+      "Low-level systems programming",
+    ],
+    concepts: [
+      "Process management",
+      "Memory management",
+      "System calls",
+      "OS architecture",
+    ],
+    githubUrl:
+      "https://github.com/DevarasettyKuldeep/Experimental-Operating-System-",
+    featured: false,
     order: 11,
   },
 ];

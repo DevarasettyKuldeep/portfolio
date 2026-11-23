@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { ExternalLink, GitFork, Star } from "lucide-react";
+import { ExternalLink, Star } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 import { GitHubRepo, languageColors } from "@/lib/github";
 
@@ -54,11 +54,9 @@ function RepoCard({ repo, index }: { repo: GitHubRepo; index: number }) {
         </div>
 
         {/* Description */}
-        {repo.description && (
-          <p className="text-gray-400 text-xs leading-relaxed mb-3 line-clamp-2">
-            {repo.description}
-          </p>
-        )}
+        <p className="text-gray-400 text-xs leading-relaxed mb-3 line-clamp-2">
+          {repo.description || "Public repository on GitHub."}
+        </p>
       </div>
 
       <div>
@@ -68,7 +66,7 @@ function RepoCard({ repo, index }: { repo: GitHubRepo; index: number }) {
             {langColor && (
               <span className="flex items-center gap-1">
                 <span
-                  className="w-2.5 h-2.5 rounded-full"
+                  className="w-2.5 h-2.5 rounded-full shrink-0"
                   style={{ backgroundColor: langColor }}
                 />
                 {repo.language}
@@ -98,8 +96,26 @@ function RepoCard({ repo, index }: { repo: GitHubRepo; index: number }) {
   );
 }
 
-export default function GitHubRepos({ repos }: { repos: GitHubRepo[] }) {
-  if (repos.length === 0) return null;
+export default function GitHubRepos({ repos = [] }: { repos?: GitHubRepo[] }) {
+  const [repoList, setRepoList] = useState<GitHubRepo[]>(repos);
+
+  useEffect(() => {
+    if (repos && repos.length > 0) {
+      setRepoList(repos);
+    }
+
+    // Client-side background sync: always fetches the freshest repo list
+    fetch("/api/github")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setRepoList(data);
+        }
+      })
+      .catch(() => {});
+  }, [repos]);
+
+  if (repoList.length === 0) return null;
 
   return (
     <div className="mt-14">
@@ -107,12 +123,12 @@ export default function GitHubRepos({ repos }: { repos: GitHubRepo[] }) {
         Explore More — Auto-synced from GitHub
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {repos.map((repo, i) => (
+        {repoList.map((repo, i) => (
           <RepoCard key={repo.id} repo={repo} index={i} />
         ))}
       </div>
-      <p className="mt-4 text-center text-gray-600 text-xs font-mono">
-        Auto-updated from{" "}
+      <p className="mt-6 text-center text-gray-500 text-xs font-mono flex items-center justify-center gap-1.5 flex-wrap">
+        <span>Auto-synced from</span>
         <a
           href="https://github.com/DevarasettyKuldeep"
           target="_blank"
@@ -120,6 +136,15 @@ export default function GitHubRepos({ repos }: { repos: GitHubRepo[] }) {
           className="text-accent hover:text-accent-light transition-colors"
         >
           github.com/DevarasettyKuldeep
+        </a>
+        <span>&amp;</span>
+        <a
+          href="https://github.com/HackstreetBoyzz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-accent-light transition-colors"
+        >
+          github.com/HackstreetBoyzz
         </a>
       </p>
     </div>
